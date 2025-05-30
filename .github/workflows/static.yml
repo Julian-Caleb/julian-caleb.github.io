@@ -37,12 +37,7 @@ jobs:
         run: npm install -g mint
 
       - name: Build documentation
-        run: mintlify build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ".mintlify/public"  # Change this if your output folder is different
+        run: mintlify dev
 
       - name: Deploy to GitHub Pages
         id: deployment
