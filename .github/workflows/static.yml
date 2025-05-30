@@ -36,8 +36,11 @@ jobs:
       - name: Install global Mint CLI
         run: npm install -g mint
 
-      - name: Run Mintlify
-        run: mintlify dev
+      - name: Install Mintlify dependencies
+        run: mintlify install
+
+      - name: Build documentation
+        run: mintlify build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
