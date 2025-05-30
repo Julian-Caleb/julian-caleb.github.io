@@ -36,9 +36,6 @@ jobs:
       - name: Install global Mint CLI
         run: npm install -g mint
 
-      - name: Install Mintlify dependencies
-        run: mintlify install
-
       - name: Build documentation
         run: mintlify build
 
