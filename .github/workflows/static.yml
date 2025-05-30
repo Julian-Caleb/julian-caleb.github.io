@@ -1,0 +1,49 @@
+# Simple workflow to deploy Mintlify docs to GitHub Pages
+name: Deploy Mintlify Docs to Pages
+
+on:
+  # Trigger deployment on push to main branch
+  push:
+    branches: ["main"]
+
+  # Allow manual trigger from Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install global Mint CLI
+        run: npm install -g mint
+
+      - name: Run Mintlify
+        run: mintlify dev
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ".mintlify/public"  # Change this if your output folder is different
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
