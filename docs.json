@@ -1,0 +1,123 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Tavus",
+  "colors": {
+    "primary": "#F230AA",
+    "light": "#FF6CC8",
+    "dark": "#F230AA"
+  },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["sections/introduction", "sections/quickstart", "sections/models"]
+          },
+          {
+            "group": "Conversational Video Interface",
+            "pages": [
+              "sections/conversational-video-interface/overview-cvi",
+              {
+                "group": "Conversation",
+                "pages": [
+                  "sections/conversational-video-interface/conversation/overview",
+                  "sections/conversational-video-interface/conversation/quickstart",
+                  {
+                    "group": "Customizations",
+                    "pages": [
+                      "sections/conversational-video-interface/conversation/customizations/recording"
+                    ]
+                  },
+                  {
+                    "group": "Conversational Use Cases",
+                    "pages": [
+                      "sections/conversational-video-interface/conversation/usecases/tavus-researcher",
+                      "sections/conversational-video-interface/conversation/usecases/ai-interviewer",
+                      "sections/conversational-video-interface/conversation/usecases/history-teacher",
+                      "sections/conversational-video-interface/conversation/usecases/sales-coach"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Persona",
+                "pages": [
+                  {
+                    "group": "Layer Configurations",
+                    "pages": [
+                      "sections/conversational-video-interface/persona/perception",
+                      "sections/conversational-video-interface/persona/tools-calling"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Interactions Protocol",
+                "pages": [
+                  "sections/conversational-video-interface/interactions-protocols/overview"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": ["sections/integrations/embedding-cvi"]
+          },
+          {
+            "group": "Resources",
+            "pages": ["sections/changelog/changelog"]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Community",
+          "href": "https://discord.gg/5Y9Er6WNN5",
+          "icon": "discord"
+        },
+        {
+          "anchor": "Status",
+          "href": "https://status.tavus.io",
+          "icon": "tower-broadcast"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Login",
+        "href": "https://platform.tavus.io"
+      },
+      {
+        "label": "Account Help",
+        "href": "https://help.tavus.io/"
+      },
+      {
+        "label": "Get Support",
+        "href": "mailto:developer-support@tavus.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://platform.tavus.io"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/tavus-io/",
+      "discord": "https://discord.gg/5Y9Er6WNN5"
+    }
+  }
+}
